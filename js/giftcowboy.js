@@ -3,7 +3,7 @@ var loadIndex = 0;
 $(document).ready(function(){
     // Load more data
     $('#generate').click(function(){
-      loadProducts();
+      hideFilter();
     });
 
     $(window).scroll(function () {
@@ -53,7 +53,6 @@ function loadProducts() {
   $(".active-interest").each(function() {
     interests.push($(this).attr('id'));
   });
-  console.log(interests);
       $.ajax({
           url: 'functions/load-products.php',
           type: 'post',
@@ -71,4 +70,13 @@ function loadProducts() {
                   $("#generate").text("Generate");
                 }
         });
+}
+
+function hideFilter() {
+  console.log("HEY");
+  $( "#gift-filter" ).fadeOut( "slow", function() {
+    var giftResultDiv = "<div class='products' id='gift-results'><div class='content-title'><p><img src='images/gift.png'> Gift Results</p></div></div>";
+    $("#container").append(giftResultDiv);
+    loadProducts();
+  });
 }
