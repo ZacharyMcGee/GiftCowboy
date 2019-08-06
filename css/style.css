@@ -17,11 +17,13 @@ body {
 .account-bar {
   height: 25px;
   background-color: #3783c4;
+  padding-left: 15%;
+  padding-right: 15%;
 }
 
 .login-signup {
-  padding-left: 15%;
-  padding-right: 15%;
+  width: 50%;
+  display: inline-block;
 }
 
 .login-signup p {
@@ -42,6 +44,35 @@ body {
   text-decoration: none;
 }
 
+.account-info {
+  float: right;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.account-info p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.account-info a {
+  color: #ddeefa;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+.account-info a:link {
+  color: #ddeefa;
+  text-decoration: none;
+}
+
+.account-info p {
+  color: #275e8e;
+  display: inline-block;
+  margin-left: 5px;
+  padding: 0px;
+}
+
 .header{
   height: 60px;
   background-color: #fff;
@@ -53,7 +84,7 @@ body {
 .header img {
   float:left;
   display: inline-block;
-  width: 190px;
+  width: 210px;
   margin-top: 7px;
   margin-left: 5px;
 }
