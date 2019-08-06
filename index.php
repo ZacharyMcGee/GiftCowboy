@@ -18,7 +18,13 @@
 
 <div class="account-bar">
   <div class="login-signup">
-    <p>Save your favorite gifts by <a href="">logging in</a> or <a href="">signing up</a></p> 
+    <p>Save your favorite gifts by <a href="">logging in</a> or <a href="">signing up</a></p>
+  </div>
+
+  <div class="account-info">
+    <a href="">Favorites</a>
+    <p>|</p>
+    <a href="">My Account</a>
   </div>
 </div>
 
@@ -30,7 +36,7 @@
   <div class="menu">
   <ul class="menu-ul">
     <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#news">News</a></li>
+    <li><a href="#news">Top Rated</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#about">About</a></li>
   </ul>
