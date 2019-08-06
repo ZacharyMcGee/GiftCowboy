@@ -14,6 +14,34 @@ body {
   min-height: 100%;
 }
 
+.account-bar {
+  height: 25px;
+  background-color: #3783c4;
+}
+
+.login-signup {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.login-signup p {
+  color: #8cc3e6;
+  margin: 0px;
+  padding: 0px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.login-signup a {
+  color: #ddeefa;
+  text-decoration: none;
+}
+
+.login-signup a:link {
+  color: #ddeefa;
+  text-decoration: none;
+}
+
 .header{
   height: 60px;
   background-color: #fff;
@@ -23,9 +51,47 @@ body {
 }
 
 .header img {
-  width: 100px;
+  float:left;
+  display: inline-block;
+  width: 190px;
   margin-top: 7px;
   margin-left: 5px;
+}
+
+.menu {
+  margin-top: 7px;
+  float: right;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu li a {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  color: #8e9394;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.menu li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.menu-active {
+  background-color: #4CAF50;
 }
 
 .container {
@@ -35,6 +101,7 @@ body {
 }
 
 .content {
+  min-width: 850px;
   min-height: 100%;
   background-color: white;
   margin-top: 20px;
@@ -46,6 +113,7 @@ body {
 }
 
 .products {
+  min-width: 850px;
   min-height: 100%;
   background-color: white;
   margin-top: 20px;
