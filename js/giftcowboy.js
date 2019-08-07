@@ -1,4 +1,5 @@
 var loadIndex = 0;
+var generated = false;
 
 $(document).ready(function(){
     // Load more data
@@ -8,7 +9,9 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
       if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
-        loadProducts();
+        if(generated == true) {
+          loadProducts();
+        }
       }
     });
 
@@ -42,6 +45,7 @@ $(document).ready(function(){
 });
 
 function loadProducts() {
+  generated = true;
   var mvar = "";
   var loadAmount = 10;
 
@@ -73,10 +77,15 @@ function loadProducts() {
 }
 
 function hideFilter() {
-  console.log("HEY");
   $( "#gift-filter" ).fadeOut( "slow", function() {
     var giftResultDiv = "<div class='products' id='gift-results'><div class='content-title'><p><img src='images/gift.png'> Gift Results</p></div></div>";
     $("#container").append(giftResultDiv);
     loadProducts();
   });
+}
+
+function showLogin() {
+  var loginDiv = "<div class='login' id='login'><div class='content-title'><p><img src='images/user.png'> Login</p></div></div>";
+  $("#container").html = loginDiv;
+  loadProducts();
 }
