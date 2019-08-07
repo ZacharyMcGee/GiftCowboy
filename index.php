@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,19 +22,24 @@
 
 <div class="account-bar">
   <div class="login-signup">
-    <p>Save your favorite gifts by <a href="">logging in</a> or <a href="">signing up</a></p>
+    <p>Save your favorite gifts by <a href="login.php">logging in</a> or <a href="">signing up</a></p>
   </div>
 
   <div class="account-info">
-    <a href="">Favorites</a>
+    <a href="favorites.php">My Favorites</a>
     <p>|</p>
-    <a href="">My Account</a>
+    <a href="account.php">My Account</a>
+    <?php
+    if (isset($_SESSION['loggedin'])) {
+    	echo "<p>|</p><a href='logout.php'>Logout</a>";
+    }
+    ?>
   </div>
 </div>
 
 <div class="header">
   <div class="logo">
-    <img src="images/logo.png">
+    <a href="index.php"><img src="images/logo.png"></a>
   </div>
 
   <div class="menu">
