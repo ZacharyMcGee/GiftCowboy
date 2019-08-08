@@ -6,16 +6,13 @@ $conn = new mysqli($host, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
   $start = $_POST["start"];
   $array = json_decode($_POST["tag"]);
   $age = $_POST["age"];
   $gender = $_POST["gender"];
-
   $genderFilter = "";
   $ageFilter = "";
   $interestFilter = "";
-
   $i = 0;
   foreach($array as $item) {
     if($i === 0) {
@@ -26,20 +23,17 @@ if ($conn->connect_error) {
     }
     $i++;
   }
-
   if($gender != 'a') {
     $genderFilter .= " AND gender = '" . $gender . "'";
   }
-
   if($age != "off") {
     $ageFilter .= " AND age = '" . $age . "' ";
   }
   $tag = $_POST["tag"];
   $sql = "SELECT id, title, url, image, description, price, tag, tag2 FROM gifts WHERE id > " . $start . $interestFilter . $genderFilter . $ageFilter;
   $html = '';
-  
-$result = $conn->query($sql);
 
+$result = $conn->query($sql);
 if (!$result) {
     trigger_error('Invalid query: ' . $conn->error);
 }
@@ -48,7 +42,6 @@ $count = 0;
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc() AND $count < 8) {
-
       $html .= "<div class='product'>";
       $html .= "<div class='product-title'>";
       $html .= "<a href='" . $row["url"] . "'>" . $row["title"] . "</a>";
@@ -77,5 +70,4 @@ if ($result->num_rows > 0) {
 echo $html;
 }
 $conn->close();
-
 ?>
