@@ -411,3 +411,11 @@ body {
   font-weight: 300;
   color: #8e9394;
 }
+
+.preview-container {
+  width: 500px;
+}
+
+.preview img {
+  max-width: 100%;
+}
