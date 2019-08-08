@@ -21,7 +21,7 @@ else {
       // output data of each row
       while($row = $result->fetch_assoc()) {
         if($row["priviledge"] == 1){
-          echo "admin";
+          include 'new-product.php';
         }
         else {
           header("Location: ../login.php");
