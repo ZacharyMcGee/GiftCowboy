@@ -52,29 +52,10 @@
         </div>
       </fieldset>
 
-      <fieldset id="age" class="fieldset-custom">
-        <legend>Age</legend>
-          <div class="switch-toggle switch-candy">
-            <input id="baby" name="age" type="radio">
-            <label class="baby-label" for="baby" onclick="">Baby</label>
-
-            <input id="toddler" name="age" type="radio">
-            <label class="toddler-label" for="toddler" onclick="">Toddler</label>
-
-            <input id="child" name="age" type="radio">
-            <label class="child-label" for="child" onclick="">Child</label>
-
-            <input id="teenager" name="age" type="radio">
-            <label class="teenager-label" for="teenager" onclick="">Teenager</label>
-
-            <input id="adult" name="age" type="radio">
-            <label class="adult-label" for="adult" onclick="">Adult</label>
-
-            <input id="off" name="age" type="radio" checked>
-            <label class="off-label" for="off" onclick="">Off</label>
-            <a></a>
-          </div>
-        </fieldset>
+      <fieldset class="fieldset-custom">
+        <legend>Age's</legend>
+          <p>From: </p><input id="agefrom" type="text" name="fname"><p>To: </p><input id="ageto" type="text" name="fname"><br>
+      </fieldset>
 
         <fieldset class="fieldset-custom">
           <legend>Interests</legend>
