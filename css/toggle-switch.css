@@ -250,66 +250,77 @@
     color: #89cff0 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .girl-label {
     color: #f3bfc4 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .off-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .baby-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .toddler-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .child-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .teenager-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .adult-label {
     color: #b7b5b5 !important;
     font-weight: 400 !important;
     text-align: center !important;
+    outline: none !important;
   }
 
   .switch-candy input:checked + .boy-label {
     color: #89cff0 !important;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0) !important;
     font-weight: 500 !important;
+    outline: none !important;
   }
 
   .switch-candy input:checked + .girl-label {
     color: #f3bfc4 !important;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0) !important;
     font-weight: 500 !important;
+    outline: none !important;
   }
 
   .switch-candy input:checked + .off-label {
     color: #b7b5b5 !important;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0) !important;
     font-weight: 500 !important;
+    outline: none !important;
   }
 
   .switch-light.switch-candy input ~ span span:first-child,
@@ -321,7 +332,7 @@
         border: 1px solid #e0e0e0;
         border-radius: 3px;
         box-shadow: 0 1px 1px rgba(187, 187, 187, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
-        background-color: #eeefee;
+        background-color: #eaeaea;
         background-image: linear-gradient(rgba(255, 255, 255, 0.2), transparent);
       }
   .switch-candy-blue a {
