@@ -10,8 +10,10 @@ if ($conn->connect_error) {
   $array = json_decode($_POST["tag"]);
   $age = $_POST["age"];
   $gender = $_POST["gender"];
+  $price = $_POST["price"];
   $genderFilter = "";
   $ageFilter = "";
+  $priceFilter = "";
   $interestFilter = "";
   $i = 0;
   foreach($array as $item) {
@@ -26,11 +28,14 @@ if ($conn->connect_error) {
   if($gender != 'a') {
     $genderFilter .= " AND gender = '" . $gender . "'";
   }
-  if($age != "off") {
-    $ageFilter .= " AND age = '" . $age . "' ";
+  if($age != "6") {
+    $ageFilter .= " AND age_from >= '" . $age . "' AND age_to <= '" . $age . "' ";
+  }
+  if($price != "0"){
+    $priceFilter .= " AND price <= '" . $price . "'";
   }
   $tag = $_POST["tag"];
-  $sql = "SELECT id, title, url, image, description, price, tag, tag2 FROM gifts WHERE id > " . $start . $interestFilter . $genderFilter . $ageFilter;
+  $sql = "SELECT id, title, url, image, description, price, tag, tag2 FROM gifts WHERE id > " . $start . $interestFilter . $genderFilter . $ageFilter . $priceFilter;
   $html = '';
 
 $result = $conn->query($sql);
