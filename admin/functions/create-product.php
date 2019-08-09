@@ -8,7 +8,8 @@ if ($conn->connect_error) {
 }
 
   $array = json_decode($_POST["tag"]);
-  $age = $_POST["age"];
+  $agefrom = $_POST["agefrom"];
+  $ageto = $_POST["ageto"];
   $gender = $_POST["gender"];
   $title = $_POST["title"];
   $url = $_POST["url"];
@@ -31,7 +32,7 @@ if ($conn->connect_error) {
     $i++;
   }
 
-  $sql = "INSERT INTO gifts (title, url, image, description, price, tag, tag2, gender, age) VALUES(" . "'$title'" . ", " . "'$url'" . "," . "'$imageurl'" . ", " . "'$description'" . ",  " . "'$price'" . ", " . "'$tag'" . ", " . "'$tag2'" . ", " . "'$gender'" . ", " . "'$age'" . ")";
+  $sql = "INSERT INTO gifts (title, url, image, description, price, tag, tag2, gender, age_from, age_to) VALUES(" . "'$title'" . ", " . "'$url'" . "," . "'$imageurl'" . ", " . "'$description'" . ",  " . "'$price'" . ", " . "'$tag'" . ", " . "'$tag2'" . ", " . "'$gender'" . ", " . "'$agefrom'" . ", " . "'$ageto'" . ")";
 
 $result = $conn->query($sql);
 
