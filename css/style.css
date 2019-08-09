@@ -208,6 +208,8 @@ body {
 .interest p {
   margin: 0px;
   padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
   text-align: center;
 }
 
@@ -221,9 +223,22 @@ body {
   width: 100%;
 }
 
+.slidecontainer img {
+  margin-left: 10px;
+  margin-right: 10px;
+  opacity: .6;
+}
+
+.max-budget-amount {
+  text-align: center;
+  color: #8e9394;
+  font-weight: 400;
+  font-size: 14px;
+}
+
 .slider {
   -webkit-appearance: none;
-  width: 100%;
+  width: calc(100% - 108px);
   height: 28px;
   background-color: #f7f7f7;
   border-radius: 3px;
@@ -251,9 +266,15 @@ body {
 }
 
 .slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
   width: 25px;
-  height: 25px;
-  background: #4CAF50;
+  height: 35px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(187, 187, 187, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.45);
+  background-color: #f1f1f1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.3), transparent);
   cursor: pointer;
 }
 
@@ -418,4 +439,10 @@ body {
 
 .preview img {
   max-width: 100%;
+}
+
+.footer {
+  margin-top: 20px;
+  background-color: #000;
+  height: 120px;
 }
