@@ -1,6 +1,7 @@
 var loadIndex = 0;
 var generated = false;
 var curImageURL = "";
+var maxBudget = 0;
 
 $(document).ready(function(){
     // Load more data
@@ -50,6 +51,43 @@ $(document).ready(function(){
       }
     });
 
+    $("#max-range").on("input click change keyup keydown", function() {
+      var amount = $("#max-range").val();
+
+      switch(amount){
+        case '1':  $("#max-budget-amount").text("Gifts less than $1.00");
+                 maxBudget = 1;
+                 break;
+        case '2':  $("#max-budget-amount").text("Gifts less than $5.00");
+                 maxBudget = 5;
+                 break;
+        case '3':  $("#max-budget-amount").text("Gifts less than $10.00");
+                 maxBudget = 10;
+                 break;
+        case '4':  $("#max-budget-amount").text("Gifts less than $25.00");
+                 maxBudget = 25;
+                 break;
+        case '5':  $("#max-budget-amount").text("Gifts less than $50.00");
+                 maxBudget = 50;
+                 break;
+        case '6':  $("#max-budget-amount").text("Gifts less than $100.00");
+                 maxBudget = 100;
+                 break;
+        case '7':  $("#max-budget-amount").text("Gifts less than $250.00");
+                 maxBudget = 250;
+                 break;
+        case '8':  $("#max-budget-amount").text("Gifts less than $500.00");
+                 maxBudget = 500;
+                 break;
+        case '9':  $("#max-budget-amount").text("Gifts less than $1000.00");
+                 maxBudget = 1000;
+                 break;
+        case '10': $("#max-budget-amount").text("Search for all gifts no matter the price");
+                 maxBudget = 0;
+                 break;
+      }
+    });
+
     $( "#music" ).click(function() {
       $(this).toggleClass('active-interest');
     });
@@ -95,7 +133,7 @@ function loadProducts() {
       $.ajax({
           url: 'functions/load-products.php',
           type: 'post',
-          data: {start:loadIndex, tag:JSON.stringify(interests), gender:gender, age:age},
+          data: {start:loadIndex, tag:JSON.stringify(interests), gender:gender, age:age, price:maxBudget},
           beforeSend:function(){
               $("#generate").text("Loading...");
             },
@@ -114,7 +152,8 @@ function loadProducts() {
 
 function createProduct() {
   var gender = $('input[name=gender]:checked', '#gender').attr('id');
-  var age = $('input[name=age]:checked', '#age').attr('id');
+  var agefrom = $('#agefrom').val();
+  var ageto = $('#ageto').val();
   var title = $('#title').val();
   var url = $('#url').val();
   var description = $('#description').val();
@@ -128,7 +167,7 @@ function createProduct() {
       $.ajax({
           url: 'functions/create-product.php',
           type: 'post',
-          data: {imageurl:curImageURL, tag:JSON.stringify(interests), gender:gender, age:age, title:title, url:url, description:description, price:price},
+          data: {imageurl:curImageURL, tag:JSON.stringify(interests), gender:gender, agefrom:agefrom, ageto:ageto, title:title, url:url, description:description, price:price},
           beforeSend:function(){
               console.log("INSIDE");
               $("#create-product").text("Loading...");
