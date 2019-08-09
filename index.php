@@ -76,23 +76,23 @@ session_start();
       <fieldset id="age" class="fieldset-custom">
         <legend>Age</legend>
           <div class="switch-toggle switch-candy">
-            <input id="baby" name="age" type="radio">
-            <label class="baby-label" for="baby" onclick="">Baby</label>
+            <input id="1" name="age" type="radio">
+            <label class="baby-label" for="1" onclick="">Baby</label>
 
-            <input id="toddler" name="age" type="radio">
-            <label class="toddler-label" for="toddler" onclick="">Toddler</label>
+            <input id="2" name="age" type="radio">
+            <label class="toddler-label" for="2" onclick="">Toddler</label>
 
-            <input id="child" name="age" type="radio">
-            <label class="child-label" for="child" onclick="">Child</label>
+            <input id="3" name="age" type="radio">
+            <label class="child-label" for="3" onclick="">Child</label>
 
-            <input id="teenager" name="age" type="radio">
-            <label class="teenager-label" for="teenager" onclick="">Teenager</label>
+            <input id="4" name="age" type="radio">
+            <label class="teenager-label" for="4" onclick="">Teenager</label>
 
-            <input id="adult" name="age" type="radio">
-            <label class="adult-label" for="adult" onclick="">Adult</label>
+            <input id="5" name="age" type="radio">
+            <label class="adult-label" for="5" onclick="">Adult</label>
 
-            <input id="off" name="age" type="radio" checked>
-            <label class="off-label" for="off" onclick="">Off</label>
+            <input id="6" name="age" type="radio" checked>
+            <label class="off-label" for="6" onclick="">Off</label>
             <a></a>
           </div>
         </fieldset>
@@ -130,13 +130,17 @@ session_start();
 
         <fieldset class="fieldset-custom">
           <legend>Max Budget</legend>
+          <p class="max-budget-amount" id="max-budget-amount">Search for all gifts no matter the price</p>
           <div class="slidecontainer">
-            <input type="range" min="1" max="25" value="5" class="slider" id="myRange">
+            <img style="display: inline-block; float: left;" src="images/cheap.png"><input type="range" min="1" max="10" value="10" class="slider" id="max-range"><img src="images/expensive.png">
           </div>
           <a></a>
         </fieldset>
 
         <button id="generate" class="button">Generate Gifts</button>
+  </div>
+
+  <div class="footer">
   </div>
 </div>
 
