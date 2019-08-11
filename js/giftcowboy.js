@@ -181,11 +181,16 @@ function createProduct() {
 }
 
 function hideFilter() {
+  hideFooter();
   $( "#gift-filter" ).fadeOut( "slow", function() {
     var giftResultDiv = "<div class='products' id='gift-results'><div class='content-title'><p><img src='images/gift.png'> Gift Results</p></div></div>";
     $("#container").append(giftResultDiv);
     loadProducts();
   });
+}
+
+function hideFooter() {
+  $( "#footer" ).fadeOut("slow");
 }
 
 function showLogin() {
