@@ -1,6 +1,6 @@
 <?php
  session_start();
- $giftid = $_POST["giftid"];
+ $giftid = $_POST["id"];
 
  if(isset($_SESSION['loggedin']))
  {
@@ -12,15 +12,18 @@
        die("Connection failed: " . $conn->connect_error);
    }
 
-   $sql = "SELECT id, accountid, giftid FROM favorited WHERE accountid = " . $_SESSION['loggedid'] . " AND giftid = " . $giftid;
+   $sql = "SELECT id, accountid, giftid FROM favorited WHERE accountid = " . $_SESSION['id'] . " AND giftid = " . $giftid;
 
    $result = $conn->query($sql);
    if (!$result) {
-     trigger_error('Invalid query: ' . $conn->error);
+     echo '1';
+   }
+   else {
+     echo '2';
    }
  }
  else
  {
-      echo '1';
+      echo '0';
  }
  ?>
