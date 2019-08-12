@@ -88,6 +88,10 @@ $(document).ready(function(){
       }
     });
 
+    $( "#favorite" ).click(function() {
+      favoriteGift();
+    });
+
     $( "#music" ).click(function() {
       $(this).toggleClass('active-interest');
     });
@@ -196,4 +200,38 @@ function hideFooter() {
 function showLogin() {
   var loginDiv = "<div class='login' id='login'><div class='content-title'><p><img src='images/user.png'> Login</p></div></div>";
   $("#container").html = loginDiv;
+}
+
+function favoriteGift(id) {
+  console.log(id);
+  $.ajax({
+      url: 'functions/favorite-gift.php',
+      type: 'post',
+      data: {id: id},
+      success:function(response)
+      {
+        if(response == 1)
+        {
+          alert('already liked');
+        }
+        else if(response == 2)
+        {
+          alert('not liked');
+        }
+        else if(response == 0){
+          alert('not logged in');
+        }
+        else {
+          alert(response);
+        }
+      },
+      error: function (errorThrown) {
+        alert(errorThrown);
+      }
+  });
+}
+
+function checkSession() {
+  console.log("HEY");
+
 }
