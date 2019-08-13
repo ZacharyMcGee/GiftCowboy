@@ -88,10 +88,6 @@ $(document).ready(function(){
       }
     });
 
-    $( "#favorite" ).click(function() {
-      favoriteGift();
-    });
-
     $( "#music" ).click(function() {
       $(this).toggleClass('active-interest');
     });
@@ -203,26 +199,45 @@ function showLogin() {
 }
 
 function favoriteGift(id) {
-  console.log(id);
+  if($("#favorite-id-" + id).attr({ "src": "images/notliked.png" })) {
+    $("#favorite-id-" + id).attr({ "src": "images/liked.png" });
+  }
+  else {
+    $("#favorite-id-" + id).attr({ "src": "images/notliked.png" });
+  }
   $.ajax({
       url: 'functions/favorite-gift.php',
       type: 'post',
       data: {id: id},
       success:function(response)
       {
-        if(response == 1)
+        if(response == 1) // Liked success
         {
-          alert('already liked');
+          if($("#favorite-id-" + id).attr({ "src": "images/notliked.png" })) {
+            $("#favorite-id-" + id).attr({ "src": "images/liked.png" });
+          }
         }
-        else if(response == 2)
+        else if(response == 2) // Liked error
         {
-          alert('not liked');
+          if($("#favorite-id-" + id).attr({ "src": "images/liked.png" })) {
+            $("#favorite-id-" + id).attr({ "src": "images/notliked.png" });
+          }
         }
-        else if(response == 0){
-          alert('not logged in');
+        else if(response == 3) // Unliked success
+        {
+          if($("#favorite-id-" + id).attr({ "src": "images/liked.png" })) {
+            $("#favorite-id-" + id).attr({ "src": "images/notliked.png" });
+          }
         }
-        else {
-          alert(response);
+        else if(response == 4) // Unliked error
+        {
+          if($("#favorite-id-" + id).attr({ "src": "images/notliked.png" })) {
+            $("#favorite-id-" + id).attr({ "src": "images/liked.png" });
+          }
+        }
+        else // Not logged in
+        {
+
         }
       },
       error: function (errorThrown) {
