@@ -1,5 +1,6 @@
 <?php
 include_once("../config.php");
+session_start();
 // Create connection
 $conn = new mysqli($host, $username, $password, $dbname);
 // Check connection
@@ -50,7 +51,26 @@ if ($result->num_rows > 0) {
       $html .= "<div class='product'>";
       $html .= "<div class='product-title'>";
       $html .= "<a href='" . $row["url"] . "'>" . $row["title"] . "</a>";
-      $html .= "<img src='images/notliked.png'>";
+
+      if(isset($_SESSION['loggedin']))
+      {
+        $sql_favorites = "SELECT id, accountid, giftid FROM favorited WHERE accountid = " . $_SESSION['id'] . " AND giftid = " . $row["id"];
+
+        $result_favorites = $conn->query($sql_favorites);
+
+        if ($result_favorites->num_rows == 0) {
+          $html .= "<img id='favorite-id-" . $row["id"] . "' src='images/notliked.png' onclick='favoriteGift(" . $row["id"] . ")'>";
+        }
+        else
+        {
+          $html .= "<img id='favorite-id-" . $row["id"] . "' src='images/liked.png' onclick='favoriteGift(" . $row["id"] . ")'>";
+        }
+      }
+      else
+      {
+        $html .= "<img id='favorite-id-" . $row["id"] . "' src='images/notliked.png' onclick='favoriteGift(" . $row["id"] . ")'>";
+      }
+
       $html .= "</div>";
       $html .= "<div class='product-body'>";
       $html .= "<div class='product-image'>";
