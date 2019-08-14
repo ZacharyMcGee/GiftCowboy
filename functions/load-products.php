@@ -47,7 +47,7 @@ else {
 $count = 0;
 if ($result->num_rows > 0) {
     // output data of each row
-    while($row = $result->fetch_assoc() AND $count < 8) {
+    while($row = $result->fetch_assoc()) {
       $html .= "<div class='product'>";
       $html .= "<div class='product-title'>";
       $html .= "<a href='" . $row["url"] . "'>" . $row["title"] . "</a>";
@@ -90,7 +90,7 @@ if ($result->num_rows > 0) {
       $count++;
     }
 } else {
-    //echo "0 results";
+    echo "0";
 }
 echo $html;
 }
