@@ -2,6 +2,7 @@ var loadIndex = 0;
 var generated = false;
 var curImageURL = "";
 var maxBudget = 0;
+var loading = false;
 
 $(document).ready(function(){
     // Load more data
@@ -44,7 +45,7 @@ $(document).ready(function(){
      });
 
     $(window).scroll(function () {
-      if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+      if(($(window).scrollTop() > $('body').height() / 2) && !loading) {
         if(generated == true) {
           loadProducts();
         }
@@ -115,9 +116,13 @@ $(document).ready(function(){
     $( "#pets" ).click(function() {
       $(this).toggleClass('active-interest');
     });
-});
 
+    if ($(location).attr('pathname').includes("favorites.php")) {
+      loadFavorites();
+    }
+});
 function loadProducts() {
+  loading = true;
   generated = true;
   var mvar = "";
   var loadAmount = 10;
@@ -138,13 +143,47 @@ function loadProducts() {
               $("#generate").text("Loading...");
             },
             success: function(response){
+              if(response == "0")
+              {
+                generated = false;
+                $('#gift-results').append("<div class='no-more-results'>No more results</div>")
+              }
+              else
+              {
+                var count = (response.match(/'product'/g) || []).length;
+                loadIndex += count;
+                // Setting little delay while displaying new content
+                // appending posts after last post with class="post"
+                //$(".post:last").after(response).show().fadeIn("slow");
+                $('#gift-results').append(response);
+                $("#generate").text("Generate");
+                console.log(response);
+                loading = false;
+              }
+            }
+        });
+}
+
+function loadFavorites() {
+  generated = true;
+  loading = true;
+  var mvar = "";
+  var loadAmount = 10;
+
+      $.ajax({
+          url: 'functions/load-favorites.php',
+          type: 'post',
+          data: {start:loadIndex},
+            success: function(response){
               var count = (response.match(/'product'/g) || []).length;
               loadIndex += count;
             // Setting little delay while displaying new content
                 // appending posts after last post with class="post"
                 //$(".post:last").after(response).show().fadeIn("slow");
-                  $('#gift-results').append(response);
-                  $("#generate").text("Generate");
+                console.log("DONE");
+                console.log(response);
+                $('#favorite-gifts').append(response);
+                loading = false;
                 }
         });
 }
