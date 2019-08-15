@@ -15,47 +15,25 @@ if (isset($_SESSION['loggedin'])) {
   <title>Gift Cowboy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="">
-  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css"/>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/toggle-switch.css">
   <script src="https://kit.fontawesome.com/322089c541.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
   <script src="js/giftcowboy.js"></script>
 </head>
 
 <body>
 
-<div class="account-bar">
-  <div class="login-signup">
-    <p>Save your favorite gifts by <a href="">logging in</a> or <a href="">signing up</a></p>
-  </div>
+<?php include "account-bar.php"; ?>
 
-  <div class="account-info">
-    <a href="favorites.php">My Favorites</a>
-    <p>|</p>
-    <a href="account.php">My Account</a>
-  </div>
-</div>
-
-<div class="header">
-  <div class="logo">
-    <a href="index.php"><img src="images/logo.png"></a>
-  </div>
-
-  <div class="menu">
-  <ul class="menu-ul">
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="#news">Top Rated</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
-  </ul>
-</div>
-</div>
+<?php include "header.php"; ?>
 
 <div id="container" class="container">
   <div id="login-form" class="login-form">
     <div class="login-title">
-      <p>Login or Sign Up</p>
+      <p>Login to GiftCowboy</p>
     </div>
 
     <div class="login">
@@ -91,6 +69,8 @@ if (isset($_SESSION['loggedin'])) {
     </div>
   </div>
 </div>
+
+<?php include "footer.php" ?>
 
 <script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"/>
