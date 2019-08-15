@@ -120,7 +120,47 @@ $(document).ready(function(){
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
     }
+
+    if ($(location).attr('pathname').includes("signup.php")) {
+    document.getElementById("email").addEventListener('input', function (evt) {
+      var emailText = document.getElementById("email").value;
+      if(!validateEmail(emailText)) {
+        if (!document.getElementsByClassName("invalid-input").length > 0) {
+          document.getElementById("email").classList.toggle("invalid-input");
+        }
+      }
+      else
+      {
+        if (document.getElementsByClassName("invalid-input").length > 0) {
+          document.getElementById("email").classList.toggle("invalid-input");
+        }
+      }
+    });
+  }
 });
+
+function validateEmail(emailText) {
+  if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailText))
+  {
+    return (false);
+  }
+  else
+  {
+    return (true);
+  }
+}
+
+function validateUsername(usernameText) {
+  if(!/^[A-Za-z0-9]+(?:[ _-][A-Za-z0-9]+)*$/.test(usernameText))
+  {
+    return (false);
+  }
+  else
+  {
+    return (true);
+  }
+}
+
 function loadProducts() {
   loading = true;
   generated = true;
