@@ -18,7 +18,7 @@
     }
     else
     {
-      echo "<a href='login.php'>Login</a><p>|</p><a href='account.php'>Sign up</a>";
+      echo "<a href='login.php'>Login</a><p>|</p><a href='signup.php'>Sign up</a>";
     }
     ?>
   </div>
