@@ -424,7 +424,6 @@ body {
 
 .login-title {
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .login-title p {
@@ -518,4 +517,23 @@ body {
 
 .invalid-input {
   background-color: #ff8e8e;
+}
+
+.login-error {
+  background-color: #ff8e8e;
+  margin-left: 8.7%;
+  margin-right: 8.7%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #db7878;
+  border-radius: 3px;
+  color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  padding: 150px;
+  color: #9b9b9b;
 }
