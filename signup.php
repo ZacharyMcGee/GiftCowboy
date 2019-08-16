@@ -36,12 +36,16 @@ if (isset($_SESSION['loggedin'])) {
       <p>Sign up to GiftCowboy</p>
     </div>
 
+    <div id="login-error">
+
+    </div>
+
     <div class="login">
 
   <div class="row">
     <div class="Absolute-Center is-Responsive">
       <div class="col-sm-12 col-md-10 col-md-offset-1">
-        <form action="new-account.php" method="post" id="loginForm">
+        <form onsubmit="signup(this);return false">
           <div class="form-group input-group">
             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
             <input id="email" class="form-control" type="text" name='email' placeholder="Email"/>
@@ -67,7 +71,7 @@ if (isset($_SESSION['loggedin'])) {
             </label>
           </div>
           <div class="form-group">
-            <button type="submit" class="btn btn-def btn-block">Login</button>
+            <button type="submit" class="btn btn-def btn-block">Sign Up</button>
           </div>
           <div class="form-group text-center">
             <a href="#">Forgot Password</a>&nbsp;|&nbsp;<a href="#">Support</a>
