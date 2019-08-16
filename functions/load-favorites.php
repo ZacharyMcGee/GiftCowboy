@@ -63,6 +63,10 @@
        }
        echo $html;
    }
+   else
+   {
+     echo "<div class='no-results'>You do not have any gifts favorited!</div>";
+   }
  }
  else
  {
