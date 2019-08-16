@@ -125,19 +125,137 @@ $(document).ready(function(){
     document.getElementById("email").addEventListener('input', function (evt) {
       var emailText = document.getElementById("email").value;
       if(!validateEmail(emailText)) {
-        if (!document.getElementsByClassName("invalid-input").length > 0) {
+        if (!document.getElementById("email").classList.contains("invalid-input")) {
           document.getElementById("email").classList.toggle("invalid-input");
         }
       }
       else
       {
-        if (document.getElementsByClassName("invalid-input").length > 0) {
+        if (document.getElementById("email").classList.contains("invalid-input")) {
           document.getElementById("email").classList.toggle("invalid-input");
         }
       }
     });
   }
+
+  if ($(location).attr('pathname').includes("signup.php")) {
+  document.getElementById("username").addEventListener('input', function (evt) {
+    var usernameText = document.getElementById("username").value;
+    if(!validateUsername(usernameText)) {
+      if (!document.getElementById("username").classList.contains("invalid-input")) {
+        document.getElementById("username").classList.toggle("invalid-input");
+      }
+    }
+    else
+    {
+      if (document.getElementById("username").classList.contains("invalid-input")) {
+        document.getElementById("username").classList.toggle("invalid-input");
+      }
+    }
+  });
+}
+
+if ($(location).attr('pathname').includes("signup.php")) {
+document.getElementById("password").addEventListener('input', function (evt) {
+  var passwordText = document.getElementById("password").value;
+  if(!validatePassword(passwordText)) {
+    if (!document.getElementById("password").classList.contains("invalid-input")) {
+      document.getElementById("password").classList.toggle("invalid-input");
+    }
+  }
+  else
+  {
+    if (document.getElementById("password").classList.contains("invalid-input")) {
+      document.getElementById("password").classList.toggle("invalid-input");
+    }
+  }
 });
+}
+
+if ($(location).attr('pathname').includes("signup.php")) {
+document.getElementById("confirmpassword").addEventListener('input', function (evt) {
+  var passwordText = document.getElementById("confirmpassword").value;
+  if(!validatePassword(passwordText)) {
+    if (!document.getElementById("confirmpassword").classList.contains("invalid-input") && document.getElementById("confirmpassword").value != document.getElementById("password").value) {
+      document.getElementById("confirmpassword").classList.toggle("invalid-input");
+    }
+  }
+  else
+  {
+    if (document.getElementById("confirmpassword").classList.contains("invalid-input") && document.getElementById("confirmpassword").value == document.getElementById("password").value) {
+      document.getElementById("confirmpassword").classList.toggle("invalid-input");
+    }
+  }
+});
+}
+
+});
+
+function signup(form) {
+  email = form[0].value;
+  username = form[1].value;
+  password = form[2].value;
+  confirmpassword = form[3].value;
+
+  if(validateEmail(email)){
+    if(validateUsername(username)){
+      if(validatePassword(password)){
+        if(password == confirmpassword){
+          $.ajax({
+              url: 'functions/new-account.php',
+              type: 'post',
+              data: {username:username, password:password, email:email},
+              error:function (xhr, ajaxOptions, thrownError) {
+                if(!$("#login-error").classList){
+                  $("#login-error").toggleClass("login-error");
+                  $("#login-error").append("Something went wrong!");
+                  return false;
+                }
+              },
+              success: function(response) {
+                if(response == '0'){
+                  alert("You are now registered! Please sign in.");
+                  window.location.replace("login.php");
+                }
+              }
+          });
+        }
+        else
+        {
+          if(!$("#login-error").classList){
+            $("#login-error").toggleClass("login-error");
+            $("#login-error").append("Passwords do not match!");
+            return false;
+          }
+        }
+      }
+      else
+      {
+        if(!$("#login-error").classList){
+          $("#login-error").toggleClass("login-error");
+          $("#login-error").append("Password does not follow the correct format!");
+          return false;
+        }
+      }
+    }
+    else
+    {
+      if(!$("#login-error").classList){
+        $("#login-error").toggleClass("login-error");
+        $("#login-error").append("Username does not follow the correct format!");
+        return false;
+      }
+    }
+  }
+  else
+  {
+    if(!$("#login-error").classList){
+      $("#login-error").toggleClass("login-error");
+      $("#login-error").append("Email does not follow the correct format!");
+      return false;
+    }
+  }
+}
 
 function validateEmail(emailText) {
   if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailText))
@@ -158,6 +276,16 @@ function validateUsername(usernameText) {
   else
   {
     return (true);
+  }
+}
+
+function validatePassword(passwordText) {
+  if(!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/.test(passwordText)) {
+    return (false);
+  }
+  else
+  {
+    return (true)
   }
 }
 
