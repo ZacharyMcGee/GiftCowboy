@@ -18,7 +18,7 @@ session_start();
     <div class="content-title">
       <p><img src="images/gift.png"> Top-Rated Gifts</p>
     </div>
-
+    <?php include "functions/load-top-rated.php"; ?>
   </div>
 
 <?php include "footer.php"; ?>
