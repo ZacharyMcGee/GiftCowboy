@@ -1,9 +1,6 @@
 <?php
- session_start();
 
- if(isset($_SESSION['loggedin']))
- {
-   include_once("../config.php");
+   include_once("config.php");
 
    $conn = new mysqli($host, $username, $password, $dbname);
 
@@ -19,7 +16,7 @@
 
    if ($result->num_rows > 0) {
        // output data of each row
-       while($row = $result->fetch_assoc() AND $count < 8) {
+       while($row = $result->fetch_assoc() AND $count < 24) {
          $html .= "<div class='product'>";
          $html .= "<div class='product-title'>";
          $html .= "<a href='" . $row["url"] . "'>" . $row["title"] . "</a>";
@@ -67,9 +64,4 @@
    {
      echo "<div class='no-results'>You do not have any gifts favorited!</div>";
    }
- }
- else
- {
-      echo '0';
- }
  ?>
