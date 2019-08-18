@@ -17,6 +17,16 @@ if (!isset($_SESSION['loggedin'])) {
 
 <?php include "header.php"; ?>
 
+<div id="container" class="container">
+  <div class="account">
+    <div class="content-title">
+      <p><img src="images/user.png"> My Account</p>
+    </div>
+    <div class="account-body">
+      Username:
+    </div>
+  </div>
+</div>
 
 <?php include "footer.php"; ?>
 
