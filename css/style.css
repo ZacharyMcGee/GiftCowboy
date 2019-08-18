@@ -537,3 +537,14 @@ body {
   padding: 150px;
   color: #9b9b9b;
 }
+
+.account {
+  margin-left: 15%;
+  margin-right: 15%;
+  background-color: #fff;
+  border: 1px solid #f1f1f1;
+}
+
+.account-body {
+  padding: 10px;
+}
