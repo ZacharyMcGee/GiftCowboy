@@ -14,7 +14,7 @@
   <div class="account-info">
     <?php
     if (isset($_SESSION['loggedin'])) {
-    	echo "<a href='favorites.php'>My Favorites</a><p>|</p><a href='account.php'>My Account</a><p>|</p><a href='logout.php'>Logout</a>";
+    	echo "<a href='favorites.php'>My Favorites</a><p>|</p><a href='logout.php'>Logout</a>";
     }
     else
     {
