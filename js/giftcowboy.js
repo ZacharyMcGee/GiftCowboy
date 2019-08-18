@@ -121,6 +121,10 @@ $(document).ready(function(){
       loadFavorites();
     }
 
+    if ($(location).attr('pathname').includes("top-rated.php")) {
+      loadTopRated();
+    }
+
     if ($(location).attr('pathname').includes("signup.php")) {
     document.getElementById("email").addEventListener('input', function (evt) {
       var emailText = document.getElementById("email").value;
@@ -340,6 +344,29 @@ function loadFavorites() {
 
       $.ajax({
           url: 'functions/load-favorites.php',
+          type: 'post',
+          data: {start:loadIndex},
+            success: function(response){
+              var count = (response.match(/'product'/g) || []).length;
+              loadIndex += count;
+            // Setting little delay while displaying new content
+                // appending posts after last post with class="post"
+                //$(".post:last").after(response).show().fadeIn("slow");
+                console.log("DONE");
+                console.log(response);
+                $('#favorite-gifts').append(response);
+                loading = false;
+                }
+        });
+}
+
+function loadTopRated() {
+  generated = true;
+  loading = true;
+  var mvar = "";
+  var loadAmount = 10;
+      $.ajax({
+          url: 'functions/load-top-rated.php',
           type: 'post',
           data: {start:loadIndex},
             success: function(response){
