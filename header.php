@@ -5,10 +5,9 @@
 
   <div class="menu">
   <ul class="menu-ul">
-    <li><a class="active" href="#home">Home</a></li>
-    <li><a href="top-rated.php">Top Rated</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#about">About</a></li>
+    <li><a href="index.php">Home</a></li>
+    <li><a href="top-rated.php">Most Favorited</a></li>
+    <li><a href="least-rated.php">Least Favorited</a></li>
   </ul>
 </div>
 </div>
