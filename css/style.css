@@ -354,7 +354,7 @@ body {
 
 .product-image {
   padding: 10px;
-  height: 210px;
+  height: 100%;
 }
 
 .product-image-overlay {
