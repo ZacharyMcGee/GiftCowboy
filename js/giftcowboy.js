@@ -117,6 +117,25 @@ $(document).ready(function(){
       $(this).toggleClass('active-interest');
     });
 
+    $( "#funny" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#cooking" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#home" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#clothing" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+
+
+
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
     }
