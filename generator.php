@@ -76,6 +76,22 @@
               <div class="interest" id="pets">
                 <p>Pets</p>
               </div>
+
+              <div class="interest" id="funny">
+                <p>Funny</p>
+              </div>
+
+              <div class="interest" id="cooking">
+                <p>Cooking</p>
+              </div>
+
+              <div class="interest" id="home">
+                <p>Home</p>
+              </div>
+
+              <div class="interest" id="clothing">
+                <p>Clothing</p>
+              </div>
           </fieldset>
 
         <fieldset class="fieldset-custom">
