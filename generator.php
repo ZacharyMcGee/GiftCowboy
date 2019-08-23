@@ -50,47 +50,67 @@
         <fieldset class="fieldset-custom">
           <legend>Interests</legend>
               <div class="interest" id="music">
-                <p>Music</p>
+                <p><i class="xs fas fa-music"></i> Music</p>
               </div>
 
               <div class="interest" id="electronics">
-                <p>Electronics</p>
+                <p><i class="fas fa-laptop"></i> Electronics</p>
               </div>
 
               <div class="interest" id="books">
-                <p>Books</p>
+                <p><i class="fas fa-book"></i> Books</p>
               </div>
 
               <div class="interest" id="sports">
-                <p>Sports</p>
+                <p><i class="fas fa-basketball-ball"></i> Sports</p>
               </div>
 
               <div class="interest" id="clothing">
-                <p>Clothing</p>
+                <p><i class="fas fa-tshirt"></i> Clothing</p>
               </div>
 
               <div class="interest" id="games">
-                <p>Games</p>
+                <p><i class="fas fa-gamepad"></i> Games</p>
               </div>
 
               <div class="interest" id="pets">
-                <p>Pets</p>
+                <p><i class="fas fa-dog"></i> Pets</p>
               </div>
 
               <div class="interest" id="funny">
-                <p>Funny</p>
+                <p><i class="fas fa-laugh-squint"></i> Funny</p>
               </div>
 
               <div class="interest" id="cooking">
-                <p>Cooking</p>
+                <p><i class="fas fa-utensil-spoon"></i> Cooking</p>
               </div>
 
               <div class="interest" id="home">
-                <p>Home</p>
+                <p><i class="fas fa-home"></i> Home</p>
               </div>
 
-              <div class="interest" id="clothing">
-                <p>Clothing</p>
+              <div class="interest" id="mancave">
+                <p><i class="fas fa-dumbbell"></i> Man Cave</p>
+              </div>
+
+              <div class="interest" id="photography">
+                <p><i class="fas fa-camera-retro"></i> Photography</p>
+              </div>
+
+              <div class="interest" id="decorative">
+                <p><i class="far fa-lightbulb"></i> Decorative</p>
+              </div>
+
+              <div class="interest" id="gardening">
+                <p><i class="fas fa-leaf"></i> Gardening</p>
+              </div>
+
+              <div class="interest" id="nerdy">
+                <p><i class="fas fa-glasses"></i> Nerdy</p>
+              </div>
+
+              <div class="interest" id="outdoors">
+                <p><i class="fas fa-campground"></i> Outdoors</p>
               </div>
           </fieldset>
 
