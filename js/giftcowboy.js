@@ -12,7 +12,6 @@ $(document).ready(function(){
 
      $( '#create-product' ).on( 'click', function (evt) {
        evt.stopImmediatePropagation();
-       console.log("HEY");
        createProduct();
      });
 
@@ -129,12 +128,29 @@ $(document).ready(function(){
       $(this).toggleClass('active-interest');
     });
 
-    $( "#clothing" ).click(function() {
+    $( "#mancave" ).click(function() {
       $(this).toggleClass('active-interest');
     });
 
+    $( "#photography" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
 
+    $( "#decorative" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
 
+    $( "#gardening" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#nerdy" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#outdoors" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
 
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
@@ -348,7 +364,6 @@ function loadProducts() {
                 //$(".post:last").after(response).show().fadeIn("slow");
                 $('#gift-results').append(response);
                 $("#generate").text("Generate");
-                console.log(response);
                 loading = false;
               }
             }
@@ -394,8 +409,6 @@ function loadTopRated() {
             // Setting little delay while displaying new content
                 // appending posts after last post with class="post"
                 //$(".post:last").after(response).show().fadeIn("slow");
-                console.log("DONE");
-                console.log(response);
                 $('#favorite-gifts').append(response);
                 loading = false;
                 }
@@ -500,6 +513,5 @@ function favoriteGift(id) {
 }
 
 function checkSession() {
-  console.log("HEY");
 
 }
