@@ -548,3 +548,9 @@ body {
 .account-body {
   padding: 10px;
 }
+
+.fas {
+  font-size: 12px;
+  padding-right: 3px;
+  opacity: .8;
+}
