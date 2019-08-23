@@ -30,7 +30,7 @@ if ($conn->connect_error) {
     $genderFilter .= " AND gender = '" . $gender . "'";
   }
   if($age != "6") {
-    $ageFilter .= " AND age_from >= '" . $age . "' AND age_to <= '" . $age . "' ";
+    $ageFilter .= " AND age_from <= '" . $age . "' AND age_to >= '" . $age . "' ";
   }
   if($price != "0"){
     $priceFilter .= " AND price <= '" . $price . "'";
