@@ -52,7 +52,18 @@
          $html .= "<img src='" . $row["image"] . "'>";
          $html .= "</div>";
          $html .= "<div class='product-description'>";
-         $html .= "<p>" . $row["description"] . "</p>";
+         $html .= "<p>";
+         $html .= "<p>";
+
+         if (strlen($row["description"]) > 290)
+         {
+           $html .= substr($row["description"], 0, 290) . '...';
+         }
+         else
+         {
+           $html .= $row["description"] . "</p>";
+         }
+         
          $html .= "</div>";
          $html .= "<div class='product-view'>";
          $html .= "<button class='view-button'>View Now</button>";
