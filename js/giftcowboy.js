@@ -159,7 +159,7 @@ $(document).ready(function(){
     $( "#beauty" ).click(function() {
       $(this).toggleClass('active-interest');
     });
-
+    
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
     }
