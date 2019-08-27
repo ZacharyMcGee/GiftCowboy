@@ -112,6 +112,14 @@
               <div class="interest" id="outdoors">
                 <p><i class="fas fa-campground"></i> Outdoors</p>
               </div>
+
+              <div class="interest" id="artscrafts">
+                <p><i class="fas fa-palette"></i> Arts & Crafts</p>
+              </div>
+
+              <div class="interest" id="beauty">
+                <p><i class="fas fa-spray-can"></i> Beauty</p>
+              </div>
           </fieldset>
 
         <fieldset class="fieldset-custom">
