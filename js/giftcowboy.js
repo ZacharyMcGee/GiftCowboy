@@ -152,6 +152,14 @@ $(document).ready(function(){
       $(this).toggleClass('active-interest');
     });
 
+    $( "#artscrafts" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
+    $( "#beauty" ).click(function() {
+      $(this).toggleClass('active-interest');
+    });
+
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
     }
