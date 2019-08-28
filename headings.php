@@ -11,14 +11,16 @@
   <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
   <script src="js/giftcowboy.js"></script>
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-146521094-2"></script>
   <script>
-'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd &&
-(window._trfd=[]),_trfd.push(
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-{'tccl.baseHost':'$BASEHOST'}),_trfd.push(
+    gtag('config', 'UA-146521094-2');
+  </script>
 
-{'ap':'$AP'},{'server':'$HOSTNAME'})
-// Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.
 </script>
 <script src='https://img1.wsimg.com/tcc/tcc_l.combined.1.0.6.min.js'></script>
 </head>
