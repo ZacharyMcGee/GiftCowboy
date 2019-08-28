@@ -120,6 +120,15 @@
               <div class="interest" id="beauty">
                 <p><i class="fas fa-spray-can"></i> Beauty</p>
               </div>
+
+              <div class="interest" id="retro">
+                <p><i class="fas fa-phone"></i> Retro</p>
+              </div>
+
+              <div class="interest" id="office">
+                <p><i class="fas fa-paperclip"></i> Office</p>
+              </div>
+
           </fieldset>
 
         <fieldset class="fieldset-custom">
