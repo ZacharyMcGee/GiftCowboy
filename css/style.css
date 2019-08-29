@@ -448,6 +448,7 @@ body {
   background-color: #fff;
   height: 160px;
   border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f1;
   padding-left: 15%;
   padding-right: 15%;
 }
@@ -553,4 +554,32 @@ body {
   font-size: 12px;
   padding-right: 3px;
   opacity: .8;
+}
+
+.another-site {
+  text-align: center;
+  height: 40px;
+}
+
+.another-site p {
+  color: #dee5ea;
+  margin: 0px;
+  padding: 0px;
+  padding-top: 10px;
+}
+
+.another-site a:link {
+  color: #c2d9ea;
+  text-decoration: none;
+}
+
+.another-site a:visited {
+  color: #c2d9ea;
+  text-decoration: none;
+}
+
+.another-site a:hover {
+  color: #5495cc;
+  border-bottom: 1px solid #93a6b5;
+  text-decoration: none;
 }
