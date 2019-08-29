@@ -279,6 +279,18 @@ body {
   cursor: pointer;
 }
 
+.product-image {
+  opacity: 1;
+}
+
+.product-image:hover {
+  opacity: .5;
+}
+
+.product-price {
+  margin-left: 5px;
+}
+
 .button {
   width: calc(100% - 30px);
   margin-left: 15px;
