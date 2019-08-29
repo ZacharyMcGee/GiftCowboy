@@ -188,6 +188,18 @@ $(document).ready(function(){
       loadTopRated();
     }
 
+    $( "#dialog" ).dialog({
+      autoOpen: false,
+      show: {
+        effect: "shake",
+        duration: 500
+      },
+      hide: {
+        effect: "drop",
+        duration: 500
+      }
+    });
+
     if ($(location).attr('pathname').includes("signup.php")) {
     document.getElementById("email").addEventListener('input', function (evt) {
       var emailText = document.getElementById("email").value;
@@ -595,7 +607,8 @@ function favoriteGift(id) {
         }
         else // Not logged in
         {
-
+          jQuery("#dialog").html("You must log in to favorite! Click <a href='login.php'>here</a> to log in");
+          $( "#dialog" ).dialog( "open" );
         }
       },
       error: function (errorThrown) {
