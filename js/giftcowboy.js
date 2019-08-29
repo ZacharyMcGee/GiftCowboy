@@ -168,6 +168,18 @@ $(document).ready(function(){
       $(this).toggleClass('active-interest');
     });
 
+    if ($(location).attr('pathname').includes("for-him.php")) {
+      loadHim();
+    }
+
+    if ($(location).attr('pathname').includes("for-her.php")) {
+      loadHer();
+    }
+
+    if ($(location).attr('pathname').includes("for-baby.php")) {
+      loadBaby();
+    }
+
     if ($(location).attr('pathname').includes("favorites.php")) {
       loadFavorites();
     }
@@ -402,9 +414,73 @@ function loadFavorites() {
             // Setting little delay while displaying new content
                 // appending posts after last post with class="post"
                 //$(".post:last").after(response).show().fadeIn("slow");
-                console.log("DONE");
-                console.log(response);
                 $('#favorite-gifts').append(response);
+                loading = false;
+                }
+        });
+}
+
+function loadHim() {
+  generated = true;
+  loading = true;
+  var mvar = "";
+  var loadAmount = 10;
+
+      $.ajax({
+          url: 'functions/load-him.php',
+          type: 'post',
+          data: {start:loadIndex},
+            success: function(response){
+              var count = (response.match(/'product'/g) || []).length;
+              loadIndex += count;
+            // Setting little delay while displaying new content
+                // appending posts after last post with class="post"
+                //$(".post:last").after(response).show().fadeIn("slow");
+                $('#for-him').append(response);
+                loading = false;
+                }
+        });
+}
+
+function loadHer() {
+  generated = true;
+  loading = true;
+  var mvar = "";
+  var loadAmount = 10;
+
+      $.ajax({
+          url: 'functions/load-her.php',
+          type: 'post',
+          data: {start:loadIndex},
+            success: function(response){
+              var count = (response.match(/'product'/g) || []).length;
+              loadIndex += count;
+            // Setting little delay while displaying new content
+                // appending posts after last post with class="post"
+                //$(".post:last").after(response).show().fadeIn("slow");
+                $('#for-her').append(response);
+                loading = false;
+                }
+        });
+}
+
+function loadBaby() {
+  generated = true;
+  loading = true;
+  var mvar = "";
+  var loadAmount = 10;
+
+      $.ajax({
+          url: 'functions/load-baby.php',
+          type: 'post',
+          data: {start:loadIndex},
+            success: function(response){
+              var count = (response.match(/'product'/g) || []).length;
+              loadIndex += count;
+            // Setting little delay while displaying new content
+                // appending posts after last post with class="post"
+                //$(".post:last").after(response).show().fadeIn("slow");
+                $('#for-baby').append(response);
                 loading = false;
                 }
         });
