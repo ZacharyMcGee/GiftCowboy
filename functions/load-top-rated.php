@@ -46,7 +46,7 @@
          $html .= "<div class='product-image-overlay'>";
          $html .= "<div class='product-price'>" . "$" . $row["price"] . "</div>";
          $html .= "</div>";
-         $html .= "<img src='" . $row["image"] . "'>";
+         $html .= "<a href='" . $row["url"] . "'><img class='product-image' src='" . $row["image"] . "'></a>";
          $html .= "</div>";
          $html .= "<div class='product-description'>";
          $html .= "<p>";
@@ -62,7 +62,7 @@
 
          $html .= "</div>";
          $html .= "<div class='product-view'>";
-         $html .= "<button class='view-button'>View Now</button>";
+         $html .= "<a href='" . $row["url"] . "'><button class='view-button'>View Now</button></a>";
          $html .= "</div>";
          $html .= "</div>";
          $html .= "</div>";
