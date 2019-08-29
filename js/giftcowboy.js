@@ -548,7 +548,7 @@ function hideFilter() {
 }
 
 function hideFooter() {
-  $( "#footer" ).fadeOut("slow");
+  $( "#footer-wrapper" ).fadeOut("slow");
 }
 
 function showLogin() {
