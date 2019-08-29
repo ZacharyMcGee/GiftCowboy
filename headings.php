@@ -6,8 +6,13 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/toggle-switch.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://kit.fontawesome.com/322089c541.js"></script>
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+  integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+  crossorigin="anonymous"></script>
   <script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
   <script src="js/giftcowboy.js"></script>
 
