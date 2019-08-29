@@ -1,3 +1,4 @@
+<div id="footer-wrapper">
 <div id="footer" class="footer">
   <div class="footer-section">
     <div class="vertical-menu">
@@ -35,4 +36,5 @@
 
 <div class="another-site">
   <p>Another project by <a href="https://www.zmcgee.com/">Zachary McGee</a></p>
+</div>
 </div>
