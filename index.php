@@ -17,6 +17,9 @@ session_start();
 
 <?php include "footer.php"; ?>
 
+<div id="dialog" title="Not Logged In">
+</div>
+
 <script>
 <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css"/>
 </script>
