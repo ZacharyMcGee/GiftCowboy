@@ -2,7 +2,7 @@
   <meta name="description" content="Gift Cowboy will find the perfect gift for you." />
   <meta charset="utf-8">
   <title>Gift Cowboy - Gift Generator | Find the Perfect Gift</title>
-  
+
   <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -23,7 +23,8 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="Zachary McGee">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (min-device-width: 500px)" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-device-width: 500px)" href="css/style-mobile.css">
   <link rel="stylesheet" href="css/toggle-switch.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://kit.fontawesome.com/322089c541.js"></script>
