@@ -16,7 +16,8 @@ if (isset($_SESSION['loggedin'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="">
   <link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.css"/>
-  <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" media="screen and (min-device-width: 500px)" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-device-width: 500px)" href="css/style-mobile.css">
   <link rel="stylesheet" href="css/toggle-switch.css">
   <script src="https://kit.fontawesome.com/322089c541.js"></script>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
