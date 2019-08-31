@@ -11,9 +11,9 @@
   <div class="footer-section">
     <div class="vertical-menu">
       <p class="active">Site</p>
-      <a href="#">Login</a>
-      <a href="#">Sign Up</a>
-      <a href="#">My Account</a>
+      <a href="login.php">Login</a>
+      <a href="signup.php">Sign Up</a>
+      <a href="favorites.php">My Account</a>
     </div>
   </div>
   <div class="footer-section">
@@ -27,9 +27,9 @@
   <div class="footer-section">
     <div class="vertical-menu">
       <p class="active">Social</p>
-      <a href="#">Instagram</a>
-      <a href="#">Facebook</a>
-      <a href="#">Twitter</a>
+      <a href="https://twitter.com/giftcowboy">Instagram</a>
+      <a href="https://www.facebook.com/giftcowboy">Facebook</a>
+      <a href="https://www.instagram.com/giftcowboy/">Twitter</a>
     </div>
   </div>
 </div>
