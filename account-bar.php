@@ -6,7 +6,7 @@
     }
     else
     {
-      echo "<p>Save your favorite gifts by <a href='login.php'>logging in</a> or <a href='signup.php'>signing up</a></p>";
+      echo "<p>Favorite gifts by <a href='login.php'>logging in</a> or <a href='signup.php'>signing up</a></p>";
     }
     ?>
   </div>
