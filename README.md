@@ -2,4 +2,4 @@
  
 An online gift generator for finding the Perfect Gift
 
-Todo: add stuff here
+Currently Hosted Live - Need to work on admin page
